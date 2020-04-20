@@ -53,9 +53,9 @@ class VatServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton( Rates::class, function (Container $app) {
-            $defaultCacheDriver = $app['cache']->getDefaultDriver();
-            $cacheDriver = $app['cache']->driver( $defaultCacheDriver );
-            return new Rates( null, $cacheDriver );
+
+            $storagePath = config('app.vat_storage_path');
+            return new Rates( $storagePath );
         });
     }
 
