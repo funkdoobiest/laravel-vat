@@ -5,12 +5,11 @@ namespace DvK\Laravel\Vat;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator as LaravelValidator;
-use DvK\Laravel\Vat\Facades\Validator as VatValidator;
 use DvK\Laravel\Vat\Rules;
 
-use DvK\Vat\Countries;
-use DvK\Vat\Rates\Rates;
-use DvK\Vat\Validator;
+use Ibericode\Vat\Countries;
+use Ibericode\Vat\Rates;
+use Ibericode\Vat\Validator;
 
 class VatServiceProvider extends ServiceProvider
 {

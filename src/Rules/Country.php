@@ -16,8 +16,7 @@ class Country implements Rule
      */
     public function passes($attribute, $value)
     {
-        $countries = Countries::all();
-        return isset($countries[$value]);
+        return Countries::hasCountryCode($value);
     }
 
     /**
